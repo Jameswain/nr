@@ -12,4 +12,4 @@ $ npm install --global nr-cli
 ```
 $ nr
 ```
-![01](/Users/jameswain/PROD/nr/docs/01.gif)
+![01](https://raw.githubusercontent.com/Jameswain/nr/master/docs/01.gif)
