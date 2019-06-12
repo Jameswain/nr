@@ -1,0 +1,36 @@
+{
+  "name": "nr",
+  "version": "0.0.1",
+  "description": "Ask for the scripts command to run in the package.json file",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "nr": "./bin/nr.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jameswain/nr.git"
+  },
+  "keywords": [
+    "npm",
+    "run",
+    "nr",
+    "ask",
+    "scripts",
+    "package.json"
+  ],
+  "author": "Jameswain",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Jameswain/nr/issues"
+  },
+  "homepage": "https://github.com/Jameswain/nr#readme",
+  "dependencies": {
+    "inquirer": "^6.3.1"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  }
+}
