@@ -1,15 +1,14 @@
 #!/usr/bin/env node
-const updateNotifier = require('update-notifier');
 const inquirer = require('inquirer');
 const fuzzy = require('fuzzy');
 const { spawnSync } = require('child_process');
 const utils = require('../index');
-const pkg = require('./package.json');
 const scripts = utils.getScripts();
-const notifier = updateNotifier({ pkg });
-notifier.notify();
-console.log(notifier.update);
+const updateNotifier = require('update-notifier');
+const pkg = require('./package.json');
 
+const notifier = updateNotifier({ pkg, updateCheckInterval: 100 });
+notifier.notify();
 inquirer.registerPrompt('autocomplete', require('inquirer-autocomplete-prompt'));
 
 if (!scripts) process.exit();
@@ -37,3 +36,4 @@ inquirer.prompt([
 ]).then(function({ job }) {
   spawnSync(`npm`, ['run', job], {stdio: 'inherit'});
 });
+
