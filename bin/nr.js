@@ -1,9 +1,14 @@
 #!/usr/bin/env node
+const updateNotifier = require('update-notifier');
 const inquirer = require('inquirer');
 const fuzzy = require('fuzzy');
-const utils = require('../index');
 const { spawnSync } = require('child_process');
+const utils = require('../index');
+const pkg = require('./package.json');
 const scripts = utils.getScripts();
+const notifier = updateNotifier({pkg});
+notifier.notify();
+console.log(notifier.update);
 
 inquirer.registerPrompt('autocomplete', require('inquirer-autocomplete-prompt'));
 
