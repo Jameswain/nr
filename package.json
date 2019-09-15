@@ -1,6 +1,6 @@
 {
   "name": "nr-cli",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Ask for the scripts command to run in the package.json file",
   "main": "index.js",
   "scripts": {
