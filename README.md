@@ -5,7 +5,7 @@
 
 # 安装
 ```
-$ npm install --global nr-cli
+$ npm install -g nr-cli
 ```
 
 # 使用
