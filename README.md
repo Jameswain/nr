@@ -12,4 +12,4 @@ $ npm install -g nr-cli
 ```
 $ nr
 ```
-![01](https://raw.githubusercontent.com/Jameswain/nr/master/docs/nr-search.gif)
+![01](https://raw.githubusercontent.com/Jameswain/nr/master/docs/02.gif)
