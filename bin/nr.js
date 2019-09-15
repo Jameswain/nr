@@ -6,7 +6,7 @@ const { spawnSync } = require('child_process');
 const utils = require('../index');
 const pkg = require('./package.json');
 const scripts = utils.getScripts();
-const notifier = updateNotifier({pkg});
+const notifier = updateNotifier({ pkg });
 notifier.notify();
 console.log(notifier.update);
 
