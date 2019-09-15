@@ -3,7 +3,10 @@
   "version": "0.0.2",
   "description": "Ask for the scripts command to run in the package.json file",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "",
+    "start": ""
+  },
   "bin": {
     "nr": "./bin/nr.js"
   },
@@ -26,7 +29,9 @@
   },
   "homepage": "https://github.com/Jameswain/nr#readme",
   "dependencies": {
-    "inquirer": "^6.3.1"
+    "fuzzy": "^0.1.3",
+    "inquirer": "^6.3.1",
+    "inquirer-autocomplete-prompt": "^1.0.1"
   },
   "engines": {
     "node": ">=6.0.0"
