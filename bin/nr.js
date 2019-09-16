@@ -5,7 +5,7 @@ const { spawnSync } = require('child_process');
 const utils = require('../index');
 const scripts = utils.getScripts();
 const updateNotifier = require('update-notifier');
-const pkg = require('./package.json');
+const pkg = require('../package.json');
 
 const notifier = updateNotifier({ pkg });  // 默认为1天检查一次
 notifier.notify({ isGlobal: true });
