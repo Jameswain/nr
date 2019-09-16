@@ -8,7 +8,7 @@ const updateNotifier = require('update-notifier');
 const pkg = require('./package.json');
 
 const notifier = updateNotifier({ pkg, updateCheckInterval: 100 });
-notifier.notify();
+notifier.notify({ isGlobal: true });
 inquirer.registerPrompt('autocomplete', require('inquirer-autocomplete-prompt'));
 
 if (!scripts) process.exit();
