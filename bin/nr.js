@@ -7,7 +7,7 @@ const scripts = utils.getScripts();
 const updateNotifier = require('update-notifier');
 const pkg = require('./package.json');
 
-const notifier = updateNotifier({ pkg, updateCheckInterval: 1000 * 60 * 60 * 2 });  // 2小时检查一次
+const notifier = updateNotifier({ pkg });  // 默认为1天检查一次
 notifier.notify({ isGlobal: true });
 inquirer.registerPrompt('autocomplete', require('inquirer-autocomplete-prompt'));
 if (process.argv[2] && ['-v', '-version', '--version'].includes(process.argv[2])) {
