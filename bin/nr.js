@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 const inquirer = require('inquirer');
 const fuzzy = require('fuzzy');
-const { spawnSync } = require('child_process');
+const { sync } = require('cross-spawn');
 const utils = require('../index');
 const scripts = utils.getScripts();
 const updateNotifier = require('update-notifier');
@@ -33,6 +33,6 @@ if (process.argv[2] && ['-v', '-version', '--version'].includes(process.argv[2])
       pageSize: 10
     },
   ]).then(function({ job }) {
-    spawnSync(`npm`, ['run', job], {stdio: 'inherit'});
+    sync(`npm`, ['run', job], {stdio: 'inherit'});
   });
 }
